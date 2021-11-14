@@ -9,7 +9,7 @@ def home():
 @app.route('/resumes_name', methods = ['GET','POST'])
 def resumes_name():
     if request.method == "POST":
-        file_name = request.files['file_name']
+        file_name = request.files['files']
         print(file_name)
         print(type(file_name))
         text = rf.text_from_pdf(file_name)

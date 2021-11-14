@@ -11,12 +11,15 @@
     <title>Hello, world!</title>
   </head>
   <body>
+    <div class="upload_files">
       <form action="\resumes_name" method="post" enctype="multipart/form-data">
       <div class="file-upload-wrapper">
-        <input type="file" id="input-file-now" name="file_name" class="file-upload" />
+        <input type="file" id="input-file-now" name="files[]" class="file-upload" multipl=""/>
       </div>
       <button type="submit" class="btn btn-primary">Submit</button>
     </form>
+  </div>
+ 
 
     <div class="resume_table my-3">
         <table class="table table-striped">
