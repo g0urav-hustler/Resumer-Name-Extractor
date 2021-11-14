@@ -10,6 +10,8 @@ def home():
 def resumes_name():
     if request.method == "POST":
         file_name = request.files['file_name']
+        print(file_name)
+        print(type(file_name))
         text = rf.text_from_pdf(file_name)
         name = rf.extract_name(text)
         return render_template('home.html', name = name)

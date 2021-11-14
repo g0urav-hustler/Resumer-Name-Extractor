@@ -8,6 +8,19 @@ from pdfminer.pdfpage import PDFPage
 from pdfminer.pdfparser import PDFParser
 import os
 
+def text_from_pdf(file_obj):
+    output_string = StringIO()
+    parser = PDFParser(file_obj)
+    doc = PDFDocument(parser)
+    rsrcmgr = PDFResourceManager()
+    device = TextConverter(rsrcmgr, output_string, laparams=LAParams())
+    interpreter = PDFPageInterpreter(rsrcmgr, device)
+    for page in PDFPage.create_pages(doc):
+        interpreter.process_page(page)
+    device.close()
+    text = output_string.getvalue()
+    output_string.close()
+    return text
 def extract_name(input_string):
     nlp = spacy.load('en_core_web_sm')
     input_string = str(input_string)
@@ -26,21 +39,6 @@ def extract_name(input_string):
     candidate_name = doc_persons[0]
     return candidate_name
 
-
-def text_from_pdf(pdf_path):
-    output_string = StringIO()
-    with open(pdf_path, 'rb') as in_file:
-        parser = PDFParser(in_file)
-        doc = PDFDocument(parser)
-        rsrcmgr = PDFResourceManager()
-        device = TextConverter(rsrcmgr, output_string, laparams=LAParams())
-        interpreter = PDFPageInterpreter(rsrcmgr, device)
-        for page in PDFPage.create_pages(doc):
-            interpreter.process_page(page)
-    device.close()
-    text = output_string.getvalue()
-    output_string.close()
-    return text
 
 
 if __name__ == "__main__":
