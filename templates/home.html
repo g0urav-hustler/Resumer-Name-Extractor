@@ -14,7 +14,7 @@
     <div class="upload_files">
       <form action="\resumes_name" method="post" enctype="multipart/form-data">
       <div class="file-upload-wrapper">
-        <input type="file" id="input-file-now" name="files[]" class="file-upload" multipl=""/>
+        <input type="file" id="input-file-now" name="files" class="file-upload" multiple />
       </div>
       <button type="submit" class="btn btn-primary">Submit</button>
     </form>
@@ -31,13 +31,13 @@
               </tr>
             </thead>
             <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>{{name}}</td>
-                    <td>"Filename"</td>
-                  </tr>
-                
-
+              {% for name in names %}
+              <tr>
+                <th scope="row">{{loop.index}}</th>
+                <td>{{name}}</td>
+                <td>"Filename"</td>
+              </tr>
+              {% endfor %}
             </tbody>
           </table>
     </div>
