@@ -8,9 +8,23 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    <title>Hello, world!</title>
+    <title>Resumer Name Extractor</title>
+    <style>
+      .head{
+    height: 70px;
+    background-color: #ffffff;
+    color: rgb(3, 199, 107);
+    background-attachment: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+     }
+    </style>
   </head>
   <body>
+    <div class="head">
+      <h1>Resume Name Extractor</h1>
+    </div>
     <div class="upload_files">
       <form action="\resumes_name" method="post" enctype="multipart/form-data">
       <div class="file-upload-wrapper">
@@ -19,8 +33,8 @@
       <button type="submit" class="btn btn-primary">Submit</button>
     </form>
   </div>
- 
-
+     {% if up_files %}
+     <h2>Resume Dataframe</h2>
     <div class="resume_table my-3">
         <table class="table table-striped">
             <thead>
@@ -31,16 +45,17 @@
               </tr>
             </thead>
             <tbody>
-              {% for name in names %}
+              {% for person_name,file_name in persons_file %}
               <tr>
                 <th scope="row">{{loop.index}}</th>
-                <td>{{name}}</td>
-                <td>"Filename"</td>
+                <td>{{person_name}}</td>
+                <td>{{file_name}}</td>
               </tr>
               {% endfor %}
             </tbody>
           </table>
     </div>
+    {% endif %}
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

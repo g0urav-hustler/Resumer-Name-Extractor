@@ -27,7 +27,6 @@ def extract_name(input_string):
     doc = nlp(input_string)
     # Extract entities
     doc_entities = doc.ents
-
     # Subset to person type entities
     doc_persons = filter(lambda x: x.label_ == 'PERSON', doc_entities)
     doc_persons = filter(lambda x: len(x.text.strip().split()) >= 2, doc_persons)
@@ -38,8 +37,6 @@ def extract_name(input_string):
     # Assuming that the first Person entity with more than two tokens is the candidate's name
     candidate_name = doc_persons[0]
     return candidate_name
-
-
 
 if __name__ == "__main__":
     resumes_path = str(input("Enter resumes folder path: "))
