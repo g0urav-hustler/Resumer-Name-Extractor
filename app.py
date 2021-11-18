@@ -30,7 +30,6 @@ def resumes_name():
             csv_name.append(",".join([name, pdf_file.filename]))
         global data_file
         data_file = "\n".join(csv_name)
-        # data_file.to_csv("resume_files.csv", index= False)
 
         return render_template('home.html', up_files = up_files , persons_file = zip(person_names,file_names))
     render_template('home.html')

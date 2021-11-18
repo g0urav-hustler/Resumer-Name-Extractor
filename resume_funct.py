@@ -1,20 +1,33 @@
-import pytesseract
-from pdf2image import convert_from_bytes
+from io import StringIO
+from pdfminer.converter import TextConverter
+from pdfminer.layout import LAParams
+from pdfminer.pdfdocument import PDFDocument
+from pdfminer.pdfinterp import PDFResourceManager, PDFPageInterpreter
+from pdfminer.pdfpage import PDFPage
+from pdfminer.pdfparser import PDFParser
 import os
 import re
 import time
 
-def text_from_pdf(resume):
-    dpi = 800
-    images = convert_from_bytes(resume.read())
-    text = pytesseract.image_to_string(images[0])
+def text_from_pdf(file_obj):
+    output_string = StringIO()
+    parser = PDFParser(file_obj)
+    doc = PDFDocument(parser)
+    rsrcmgr = PDFResourceManager()
+    device = TextConverter(rsrcmgr, output_string, laparams=LAParams())
+    interpreter = PDFPageInterpreter(rsrcmgr, device)
+    for page in PDFPage.create_pages(doc):
+        interpreter.process_page(page)
+    device.close()
+    text = output_string.getvalue()
+    output_string.close()
     return text
 
 def extract_name(text):
     name = ''
     text = text.split("\n")
     re_pattern = '[A-za-z]+\s[A-za-z]+'
-    for i in range(10):
+    for i in range(len(text)):
         if "Name" in text[i] or "NAME":
             text[i] = re.sub("Name", '', text[i])
             text[i] = re.sub("NAME", '', text[i])
@@ -49,8 +62,10 @@ if __name__ == "__main__":
     start = time.time()
     for resume in resumes_list:
         resume_path = resumes_path + '/' + resume
-        text = text_from_pdf(resume_path)
+        file_obj = open(resume_path, 'rb')
+        text = text_from_pdf(file_ob)
         name = extract_name(text)
+        file_obj.close()
         print(resume,'==> ' , name)
     end =time.time()
     print("Total Time = ", (end-start)/60)
