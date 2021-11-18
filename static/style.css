@@ -23,6 +23,12 @@
 .upload_files{
     margin-top: 2rem;
 }
+.table_cont{
+  margin-top: 2rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  margin-block-end: 6rem;
+}
 .footer {
   text-align: center;
   color: aliceblue;

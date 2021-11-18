@@ -29,7 +29,7 @@ def resumes_name():
             file_names.append(pdf_file.filename)
             csv_name.append(",".join([name, pdf_file.filename]))
         global data_file
-        data_file = "\n".join(csv_name)
+        data_file = "Person Name, Resume File\n" + "\n".join(csv_name)
 
         return render_template('home.html', up_files = up_files , persons_file = zip(person_names,file_names))
     render_template('home.html')
