@@ -1,12 +1,12 @@
 import pytesseract
-from pdf2image import convert_from_path
+from pdf2image import convert_from_bytes
 import os
 import re
 import time
 
 def text_from_pdf(resume):
     dpi = 800
-    images = convert_from_path(resume, dpi)
+    images = convert_from_bytes(resume.read())
     text = pytesseract.image_to_string(images[0])
     return text
 

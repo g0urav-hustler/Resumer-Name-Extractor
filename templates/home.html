@@ -7,19 +7,15 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
+    <!-- Footer Icon link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- css -->
+  <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
 
     <title>Resumer Name Extractor</title>
-    <style>
-      .head{
-    height: 70px;
-    background-color: #ffffff;
-    color: rgb(3, 199, 107);
-    background-attachment: inherit;
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-     }
-    </style>
+
   </head>
   <body>
     <div class="head">
@@ -34,6 +30,7 @@
     </form>
   </div>
      {% if up_files %}
+     <a href="/download_file">Click me.</a>
      <h2>Resume Dataframe</h2>
     <div class="resume_table my-3">
         <table class="table table-striped">
@@ -56,6 +53,15 @@
           </table>
     </div>
     {% endif %}
+
+    <div class="footer">
+      <div class="social-icons">
+        <a href="https://github.com/g0urav-hustler" target="_blank" class="link"><i class='bx bxl-github'></i></a>
+        <a href="https://www.linkedin.com/in/gourav-chouhan-3b357a202/" target="_blank" class="link"><i class='bx bxl-linkedin-square'></i></a>
+        <a href="https://www.instagram.com/g0urav_hustler/" target="_blank" class="link"><i class='bx bxl-instagram'></i></a>
+      </div>
+      <p><h4>©2021 Gourav Chouhan</h4></p>
+    </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
