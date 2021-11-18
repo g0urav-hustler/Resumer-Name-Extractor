@@ -12,6 +12,7 @@
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
 
     <!-- css -->
+<!--     <link rel="stylesheet" href="static/static.css"> -->
   <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
 
     <title>Resumer Name Extractor</title>
@@ -21,17 +22,21 @@
     <div class="head">
       <h1>Resumer Name Extractor</h1>
     </div>
-    <div class="upload_files">
-      <form action="\resumes_name" method="post" enctype="multipart/form-data">
-      <div class="file-upload-wrapper">
+    <div class="upload_files" >
+      <form action="\resumes_name" method="post" enctype="multipart/form-data" >
+        <div class="mb-3" style="display:block;width: 80% ;margin-left: 6rem; ">
+            <!-- <label for="formFileMultiple" class="form-label"></label> -->
+            <input class="form-control" type="file" id="formFileMultiple" multiple>
+          </div>
+      <!-- <div class="file-upload-wrapper">
         <input type="file" id="input-file-now" name="files" class="file-upload" multiple />
-      </div>
+      </div> -->
       <button type="submit" class="btn btn-primary">Submit</button>
     </form>
   </div>
      {% if up_files %}
-     <a href="/download_file">Click me.</a>
-     <h2>Resume Dataframe</h2>
+     <a href="/download_file" style="display: block;text-align: center;">Click me.</a>
+     <h2 style="text-align:center;margin-top: 2rem;">Resume Dataframe</h2>
     <div class="resume_table my-3">
         <table class="table table-striped">
             <thead>
@@ -60,7 +65,7 @@
         <a href="https://www.linkedin.com/in/gourav-chouhan-3b357a202/" target="_blank" class="link"><i class='bx bxl-linkedin-square'></i></a>
         <a href="https://www.instagram.com/g0urav_hustler/" target="_blank" class="link"><i class='bx bxl-instagram'></i></a>
       </div>
-      <p><h4>©2021 Gourav Chouhan</h4></p>
+      <p><h6>©2021 Gourav Chouhan</h6></p>
     </div>
 
     <!-- Optional JavaScript -->
