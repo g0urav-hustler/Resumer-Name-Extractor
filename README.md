@@ -78,7 +78,6 @@ Pre-requisite : Profile on Heroku and Heroku was install in your computor,
 To install Heroku see [Reference](https://devcenter.heroku.com/articles/heroku-cli)
 
 
-
 ----------------------------
 ## Repository Overview
 ```
@@ -93,26 +92,5 @@ To install Heroku see [Reference](https://devcenter.heroku.com/articles/heroku-c
 ├── requirements.txt
 └── resume_funct.py
 ```
-
-
-----------------------------
-<details>
-<summary > <h2>
-Credits and Resources
-</h2></summary>
-</details>
-----------------------------
-<details>
-<summary > <h2>
-License
-</h2></summary>
-</details>
-----------------------------
-<details>
-<summary > <h2>
-Contributors
-</h2></summary>
-</details>
-----------------------------
 
 
