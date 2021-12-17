@@ -136,18 +136,18 @@ The above copyright notice and this permission notice shall be included in all c
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ----------------------------
-## Contributors
-[<img src = "https://github.com/g0urav-hustler/Resumer-Name-Extractor/blob/master/readme%20resources/Profile.png" width = 200] |
+## Team
+<img src = "https://github.com/g0urav-hustler/Resumer-Name-Extractor/blob/master/readme%20resources/Profile.png" width = 100> |
 -|
 [Gourav Chouhan](https://github.com/g0urav-hustler) |
 
-[<img src = "readme resources/Sakshi Profile.jpeg" width = 200] |
+
+<img src = "readme resources/Sakshi Profile.jpeg" width = 100> |
 -|
 [Sakshi Jain](https://github.com/sakshi4235) | 
 
+----------------------------
 
-
-
-
+### If you like this repo and it is useful, please don't forget to give a ⭐.
 
 
