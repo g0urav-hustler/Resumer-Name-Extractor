@@ -7,7 +7,7 @@
 ## Overview
 #### It was a website that extract candidates name and make a excel file of candidates names and their file name. Than the excel file can be downloaded in the local computer. 
 ### Web view:
-![](https://github.com/g0urav-hustler/Resumer-Name-Extractor/blob/master/web%20image/website%20image.png)
+![](https://github.com/g0urav-hustler/Resumer-Name-Extractor/blob/master/readme%20resources/website%20image.png)
 
 ----------------------------
 ## Problem Statement
@@ -136,6 +136,15 @@ The above copyright notice and this permission notice shall be included in all c
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ----------------------------
+## Contributors
+[<img src = "https://github.com/g0urav-hustler/Resumer-Name-Extractor/blob/master/readme%20resources/Profile.png" width = 200] |
+-|
+[Gourav Chouhan](https://github.com/g0urav-hustler) |
+
+[<img src = "readme resources/Sakshi Profile.jpeg" width = 200] |
+-|
+[Sakshi Jain](https://github.com/sakshi4235) | 
+
 
 
 
