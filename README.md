@@ -10,6 +10,15 @@
 ![](https://github.com/g0urav-hustler/Resumer-Name-Extractor/blob/master/web%20image/website%20image.png)
 
 ----------------------------
+## Problem Statement
+
+If a person's job is to hire candidates for your company and you see a lots of resume been submitted for that. Sometimes the files which has been submitted not had an appropriate naming ,so you are confused about whose resume file that has been.
+
+----------------------------
+## Goal
+To make a python model that takes resume file and extract their name from it,  so that the person easily find out the candidates resume file.
+
+----------------------------
 ## Technical Aspects
 - Extract the text frm pdf page.
 - Extract the proper name of the person from the text.
