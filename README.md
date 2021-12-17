@@ -12,7 +12,8 @@
 ----------------------------
 ## Technical Aspects
 - Extract the text frm pdf page.
-- Extract the proper name of the person from the text
+- Extract the proper name of the person from the text.
+- It can extract about 90%-95% correct names from the resumes.
 
 ### Technology Used 
 ![](https://img.shields.io/badge/Python-3.7-blue.svg)
@@ -59,11 +60,11 @@ To install Docker, see [Reference](https://runnable.com/docker/getting-started/)
 
 Docker command to build the docker container
 ```
-$ docker build -t [app-name]:latest .
+$ docker build -t [your-app-name]:latest .
  ```
 To run the docker container
 ``` 
-$ docker run -p80:8000 [app-name]
+$ docker run -p80:8000 [your-app-name]
 ```
 To see docker container 
 ```
@@ -73,10 +74,31 @@ $ docker images
 ----------------------------
 ## Deployment
 The app was deployed on heroku platform.
+
 Pre-requisite : Profile on Heroku and Heroku was install in your computor,
 
 To install Heroku see [Reference](https://devcenter.heroku.com/articles/heroku-cli)
 
+Login to your heroku account
+```
+$ heroku container:login
+```
+Create a web app on heroku
+```
+$ heroku create [your-app-name]
+```
+Tag your docker container as heroku web app
+```
+$ docker tag [your-app-name]:latest registry.heroku.com/[your-app-name]/web
+```
+Pushing the docker container on the web
+```
+$ docker push registry.heroku.com/[your-app-name]/web
+```
+Releasing the web app
+```
+$ heroku container:release web -a [your-app-name]
+```
 
 ----------------------------
 ## Repository Overview
