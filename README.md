@@ -113,6 +113,7 @@ $ heroku container:release web -a [your-app-name]
 ## Repository Overview
 ```
 ├── __pycache__
+├── readme resources
 ├── static 
 │   └──syle.css
 ├── templates
