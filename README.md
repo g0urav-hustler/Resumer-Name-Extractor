@@ -1,5 +1,5 @@
 
-<h1 align="center" >Electronic Component Scanner</h1>
+<h1 align="center" >Resumer Name Extractor</h1>
 
 **Website** : [Resumer Name Extractor](https://resumer-name-extractor.herokuapp.com/)
 
