@@ -1,7 +1,7 @@
 
 <h1 align="center" >Resumer Name Extractor</h1>
 
-**Website** : [Resumer Name Extractor](https://resumer-name-extractor.herokuapp.com/)
+**Website** : [Resumer Name Extractor](https://resumer-name-extractor.onrender.com)
 
 
 ## Overview
